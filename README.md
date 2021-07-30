@@ -168,7 +168,6 @@ The user will need an initial password set to be able to login. To do this:
 ## Client Configuration
 
 
-
 Clients tab allows you to manage your allow application clients
 
 1. Adding a Client: It is simple to add a client, the same process works for any type of application.
@@ -178,8 +177,9 @@ Clients tab allows you to manage your allow application clients
      -   Protocol: ‘OpenID-Connect/SAML’
 
      -   Root Url: Application Hostname
+     -   
+![image](https://user-images.githubusercontent.com/11324759/127604281-d5bb380a-7d8f-4ae0-9bb3-a7518fd7b915.png)
 
-![image](https://user-images.githubusercontent.com/11324759/127604031-81b53a3d-cd4b-4003-90c1-84ec9a7f1f8e.png)
 
 
 
