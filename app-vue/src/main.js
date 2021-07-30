@@ -1,11 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-new Vue({
-  el: '#app',
-  render: h => h(App)
-})
-
 let initOptions = {
   url: 'http://127.0.0.1:8080/auth', realm: 'keycloak-demo', clientId: 'app-vue', onLoad: 'login-required'
 }
