@@ -130,8 +130,6 @@ Let’s create our first realm.
 
 ## Create a User
 
-
-
 Initially there are no users in a new realm, so let’s create one:
 
 1. Open the Keycloak Admin Console
@@ -177,7 +175,7 @@ Clients tab allows you to manage your allow application clients
      -   Protocol: ‘OpenID-Connect/SAML’
 
      -   Root Url: Application Hostname
-     -   
+     
 ![image](https://user-images.githubusercontent.com/11324759/127604281-d5bb380a-7d8f-4ae0-9bb3-a7518fd7b915.png)
 
 
