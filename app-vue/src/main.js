@@ -1,8 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
+import VueLogger from 'vuejs-logger';
+import * as Keycloak from 'keycloak-js';
+
+Vue.use(VueLogger);
 
 let initOptions = {
-  url: 'http://127.0.0.1:8080/auth', realm: 'keycloak-demo', clientId: 'app-vue', onLoad: 'login-required'
+  url: 'http://127.0.0.0:8080/auth', realm: 'keycloak-demo', clientId: 'app-vue', onLoad: 'login-required'
 }
 
 let keycloak = Keycloak(initOptions);
