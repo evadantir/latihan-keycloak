@@ -1,0 +1,30 @@
+version: '3'
+services: 
+  postgres:
+    image: postgres:latest
+    environment: 
+      POSTGRES_DB: keycloak
+      POSTGRES_USER: keycloak
+      POSTGRES_PASSWORD: password
+    ports: 
+      - 5435:5432
+
+  keycloak:
+    image: jboss/keycloak:7.0.0
+    environment: 
+      KEYCLOAK_USER: user
+      KEYCLOAK_PASSWORD: user
+      PROXY_ADDRESS_FORWARDING: "true"
+      DB_VENDOR: POSTGRES
+      DB_ADDR: postgres
+      DB_PORT: 5435
+      DB_DATABASE: keycloak
+      DB_USER: keycloak
+      DB_PASSWORD: password
+    volumes: 
+      - ./themes/telkom-keycloak:/opt/jboss/keycloak/themes/telkom-keycloak
+      # - ./standalone.xml:/opt/jboss/keycloak/standalone/configuration/standalone.xml
+    ports: 
+      - 8080:8080
+    depends_on:
+      - postgres
